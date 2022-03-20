@@ -1,0 +1,47 @@
+#IMPORT INI JANGAN ADA YANG DI UBAH#
+import time
+import asyncio
+import sys
+import random
+import threading
+
+from telethon import TelegramClient, events, utils
+
+api_id = '3425213'
+api_hash = '1e25b144a8bb938257a77140e5d2af6f'
+sesi_file = '/data/data/com.termux/files/home/sesiAdminyttt'
+
+#Link grup di taruh disini, buat secara berurutan ke bawah#
+dest_1 = 'https://t.me/XRP_RippleAirdropV2BOT'
+
+#JANGAN DIGANTI DAN DIRUBAH#
+def hard():
+    loop = asyncio.set_event_loop(asyncio.new_event_loop())
+    with TelegramClient('Admin', api_id, api_hash, loop=loop) as client:
+
+        async def nungguin(w):
+            await asyncio.sleep(w)
+
+        async def pythonclass(client, w):
+            while True:
+
+#Edit teks promosi disini#
+                await client.send_message(dest_1, """🆓 CLAIM FREE""", parse_mode='md')
+                print (time.asctime(),'_','Success -> Messages Task 1 Sent!!!')
+‌
+
+                #JANGAN DIHAPUS#
+                await nungguin(w)
+
+
+        with client:
+            #Gunakan jeda waktu dalam detik!
+            client.loop.create_task(pythonclass(client, 3700))
+            client.run_until_disconnected()
+
+#JANGAN GANTI WATERMARK INI!!!#
+threading.Thread(target=hard).start()
+print('========================================')
+print(' @Rizki636 | NANO SAUNDING VERSI 3.0  ')
+print('          ->Selamat Sounding<-          ')
+print('========================================')
